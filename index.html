@@ -18,13 +18,15 @@
 	    
       <!-- 3DCGモデルを読み込む -->
       <a-assets>
-        <a-asset-item id="rose" src="./asset/pochama.glb" animation-mixer="clip:*"></a-asset-item>
+        <a-asset-item id="pochama" src="./asset/pochama.glb"></a-asset-item>
       </a-assets>
+	<a-entity animation-mixer="clip:*" gltf-model="#pochama" visible="true">
+        </a-entity>
 
       <!-- マーカーの.pattファイルを読み込む -->
       <a-marker type="pattern" url="./asset/pattern-flower.patt">
         <!-- 3Dモデルを呼び出す -->
-        <a-entity gltf-model="#rose"></a-entity>
+        <a-entity gltf-model="#pochama"></a-entity>
       </a-marker>
       
       <!-- カメラを追加 -->
