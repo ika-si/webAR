@@ -8,9 +8,8 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <!-- AR.js を読み込む -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-
-
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <!-- glTFに含まれたアニメーションを再生する為の読み込み -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
     <!-- <title>任意のページタイトル</title> -->
   </head>
@@ -19,13 +18,13 @@
 	    
       <!-- 3DCGモデルを読み込む -->
       <a-assets>
-        <a-asset-item id="pochama" src="./asset/pochama.glb"></a-asset-item>
+        <a-asset-item id="rose" src="./asset/pochama.glb"></a-asset-item>
       </a-assets>
 
       <!-- マーカーの.pattファイルを読み込む -->
       <a-marker type="pattern" url="./asset/pattern-flower.patt">
         <!-- 3Dモデルを呼び出す -->
-        <a-entity gltf-model="#pochama"></a-entity>
+        <a-entity gltf-model="#rose"></a-entity>
       </a-marker>
       
       <!-- カメラを追加 -->
