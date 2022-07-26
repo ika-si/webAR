@@ -20,13 +20,12 @@
       <a-assets>
         <a-asset-item id="pochama" src="./asset/pochama.glb"></a-asset-item>
       </a-assets>
-	<a-entity scale="0.8 0.8 0.8" animation-mixer="clip:*" gltf-model="#pochama" visible="true">
-        </a-entity>
 
       <!-- マーカーの.pattファイルを読み込む -->
       <a-marker type="pattern" url="./asset/pattern-flower.patt">
         <!-- 3Dモデルを呼び出す -->
-        <a-entity gltf-model="#pochama"></a-entity>
+        <a-entity animation-mixer="clip:*" gltf-model="#pochama" visible="true">
+        </a-entity>
       </a-marker>
       
       <!-- カメラを追加 -->
